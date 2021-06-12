@@ -1,5 +1,5 @@
 {% set name = "pymodulon" %}
-{% set version = "0.1.1.dev0" %}
+{% set version = "0.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pymodulon-{{ version }}.tar.gz
-  sha256: d5fefc245d283c202b5b2d67bf340f37c556be0fa23adbe972b42414953349e5
+  sha256: e082e06ed3487cba075972f3571d10e7ff60a3b29b3c9c75a8f23cea4d3044cf
 
 build:
   number: 0
