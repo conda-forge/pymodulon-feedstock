@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.6, <=3.10
   run:
     - adjusttext >=0.7
     - beautifulsoup4 >=4.9
@@ -56,3 +56,5 @@ about:
 extra:
   recipe-maintainers:
     - avsastry
+    - AnnieYuan21
+    - dczielinski
