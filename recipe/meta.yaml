@@ -7,18 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pymodulon-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pymodulon-{{ version }}.tar.gz
   sha256: 7984649cdf25a9d57a59000ac0adc781f44b79eaafd13a4a3f61c87ab3878d06
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6,<3.9
+    - python {{ python_min }}
   run:
     - adjusttext >=0.7
     - beautifulsoup4 >=4.9
@@ -31,7 +31,7 @@ requirements:
     - numpy >=1.19
     - openpyxl >=2.5
     - pandas >=1.0
-    - python <3.9,>=3.6
+    - python >={{ python_min }},<3.9
     - scikit-learn >=0.23
     - scipy >=1.5
     - seaborn >=0.10
@@ -45,6 +45,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/SBRG/pymodulon
